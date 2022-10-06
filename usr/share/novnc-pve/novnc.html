@@ -1,3 +1,12 @@
+<!--
+Copyright (C) 2022 Performave
+Use of this software is govered by the Business Source License included in the LICENSE.md file and at www.mariadb.com/bsl11.
+
+Change Date: October 6th, 2028
+
+On the date above, in accordance with the Business Source License, use of this software will be governed by the open source license specified in the LICENSE.md file.
+-->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,7 +22,8 @@
      / / /  / ____/  __/ /  / __/ /_/ / /  / / / / / / /_/ /| |/ /  __/
     /_/_/  /_/    \___/_/  /_/  \____/_/  /_/ /_/ /_/\__,_/ |___/\___/
     performave.com
-    </pre>
+            </pre
+    >
 
     <script>
       const throwValidationError = (requiredElement) => {
@@ -38,16 +48,17 @@
       const expirationDate = new Date()
       expirationDate.setTime(expirationDate.getTime() + 86400000)
 
-      document.cookie = `PVEAuthCookie=${token}; expires=${expirationDate.toGMTString()}; path=/${document.location.protocol === "https:" ? '; secure' : ''}`
+      document.cookie = `PVEAuthCookie=${token}; expires=${expirationDate.toGMTString()}; path=/${
+        document.location.protocol === 'https:' ? '; secure' : ''
+      }`
 
       const node = queryAndValiate('node', URL)
       const server = queryAndValiate('vmid', URL)
       let consoleType = queryAndValiate('console', URL)
       let virtualizationType = queryAndValiate('virtualization', URL)
 
-      if (consoleType == 'qemu' || virtualizationType == 'qemu' )
-      {
-        consoleType = 'kvm';
+      if (consoleType == 'qemu' || virtualizationType == 'qemu') {
+        consoleType = 'kvm'
       } else if (virtualizationType) {
         consoleType = virtualizationType
       }
