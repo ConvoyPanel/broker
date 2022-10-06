@@ -7,6 +7,17 @@ jobs:
   release:
     runs-on: ubuntu-20.04
     steps:
+      - name: Create release branch and bump version
+        env:
+          REF: ${{ github.ref }}
+        run: |
+          BRANCH=release/${REF:10}
+          git config --local user.email "ci@convoypanel.com"
+          git config --local user.name "Convoy CI"
+          git checkout -b $BRANCH
+          git push -u origin $BRANCH
+          git commit -m "bump version for release"
+          git push
       - name: Create release archive
         run: |
           rm -rf LICENSE.md
