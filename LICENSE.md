@@ -5,6 +5,11 @@ Additional Use Grant
 
 The licensee may use this code in production if they have an active subscription from Performave. However, the licensee must remain within the limits defined by the subscription.
 
+Change License
+
+GNU AFFERO GENERAL PUBLIC LICENSE
+Version 3, 19 November 2007
+
 Terms
 
 The Licensor hereby grants you the right to copy, modify, create derivative works, redistribute, and make non-production use of the Licensed Work. The Licensor may make an Additional Use Grant, above, permitting limited production use.
